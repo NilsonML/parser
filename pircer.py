@@ -5,8 +5,10 @@ from time import sleep
 
 data = []
 
+quantity_of_page = int(input("Введите количество страниц: "))
+
 def parse_by_class(url, class_name):
-    for page in range(1,3):
+    for page in range(1,quantity_of_page+1):
         
         url = f"https://eda.ru/recepty?page={page}"
         response = requests.get(url)
